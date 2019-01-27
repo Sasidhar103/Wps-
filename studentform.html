@@ -1,0 +1,175 @@
+<html>
+<head>
+<script type="text/javascript">
+function validate()
+{ 
+   if( document.StudentRegistration.textnames.value == "" )
+   {
+     alert( "Please provide your Name!" );
+     document.StudentRegistration.textnames.focus() ;
+     return false;
+   }
+   if( document.StudentRegistration.rollno.value == "" )
+   {
+     alert( "Please provide your Roll Number!" );
+     document.StudentRegistration.fathername.focus() ;
+     return false;
+   }
+   
+     
+   if( document.StudentRegistration.Year.value == "-1" )
+   {
+     alert( "Please provide your Year!" );
+     document.StudentRegistration.Year.focus() ;
+     return false;
+   }   
+   if( document.StudentRegistration.Branch.value == "-1" )
+   {
+     alert( "Please provide your Branch!" );
+     document.StudentRegistration.Branch.focus() ;
+     return false;
+   }   
+   if( document.StudentRegistration.Section.value == "-1" )
+   {
+     alert( "Please provide your Select Section!" );
+     document.StudentRegistration.Section.focus() ;
+     return false;
+   } 
+  
+
+if( document.StudentRegistration.reason.value == "" )
+   {
+     alert( "Please provide your Reason for the leave!" );   
+     return false;
+   }   
+
+if( document.StudentRegistration.proctor.value == "" )
+   {
+     alert( "Please provide your Respective proctor!" );
+     return false;
+   }   
+
+if( document.StudentRegistration.myDate.value == "" )
+   {
+     alert( "Please provide your Leave date!" );
+     document.StudentRegistration.myDate.focus() ;
+     return false;
+   }   
+
+if( document.StudentRegistration.coordinator.value == "" )
+   {
+     alert( "Please provide your Class Co-ordinator!" );  
+     return false;
+   }   
+
+ 
+
+  
+  if( document.StudentRegistration.mobileno.value == "" ||
+           isNaN( document.StudentRegistration.mobileno.value) ||
+           document.StudentRegistration.mobileno.value.length != 10 )
+   {
+     alert( "Please provide a Mobile No in the format 123." );
+     document.StudentRegistration.mobileno.focus() ;
+     return false;
+   }
+   return( true );
+}
+</script>
+<style>
+class1{
+border-style:lined;
+border-radius:4px auto;
+}
+</style>
+</head>
+<body>
+<form action="leave.html" name="StudentRegistration" onsubmit="return(validate());">
+
+<table class="class1" cellpadding="5" width="65%" height="90%"bgcolor="99FFFF" align="center"
+cellspacing="2" >
+
+<tr>
+<td colspan=2>
+<center><font size=4><b>Student Application form</b></font></center>
+</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td><input type=text name=textnames id="textname" size="30"></td>
+</tr>
+
+<tr>
+<td>Roll number</td>
+<td><input type="text" name="rollno" id="rollno"
+size="30"></td>
+</tr>
+
+
+
+<tr>
+<td>Year</td>
+<td><select name="Year">
+<option value="-1" selected>select..</option>
+<option value="one">ONE</option>
+<option value="two">TWO</option>
+<option value="three">THREE</option>
+<option value="four">FOUR</option>
+</select></td>
+</tr>
+
+<tr>
+<td>Branch</td>
+<td><select name="Branch">
+<option value="-1" selected>select..</option>
+<option value="cse">CSE</option>
+<option value="ece">ECE</option>
+<option value="mech">MECH</option>
+<option value="eee">EEE</option>
+<option value="civil">CIVIL</option>
+<option value="it">IT</option></select></td>
+</tr>
+
+<tr>
+<td>Section</td>
+<td><select name="Section">
+<option value="-1" selected>select..</option>
+<option value="a">A</option>
+<option value="b">B</option>
+</select></td>
+</tr>
+
+
+<tr>
+<td>Leave Date</td>
+<td><input type="date" name="date" id="myDate" size="30" value="2019-28-01"></td>
+</tr>
+
+<tr>
+<td>Reason For Leave</td>
+<td><input type="text" name="reason" id="reason" size="30"></td>
+</tr>
+
+<tr>
+<td>Proctor</td>
+<td><input type="text" name="proctor" id="proctor" size="30"></td>
+</tr>
+
+<tr>
+<td>Co-ordinator</td>
+<td><input type="text" name="coordinator" id="coordinator" size="30"></td>
+</tr>
+
+<tr>
+<td>MobileNo</td>
+<td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+</tr>
+<tr>
+<td><input type="reset"></td>
+<td colspan="2"><input type="submit" value="Submit Form" /></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
